@@ -1,0 +1,12 @@
+li {
+    list-style-type: none;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+}
+
+.p {
+    color: darkblue;
+}

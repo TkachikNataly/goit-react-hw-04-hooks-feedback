@@ -1,0 +1,20 @@
+.button {
+    width: 100px;
+    height: 20px;
+    background-color: darkcyan;
+    color: blue;
+
+    font-size: 30;
+    text-align: center;
+
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+    outline: 2px solid darkslateblue;
+}
