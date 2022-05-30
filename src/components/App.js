@@ -15,8 +15,15 @@ function App() {
         return Object.keys(options);
     };
 
-    const onLeaveFeedback = event => {
-        switch (event.target.name) {
+    const countTotalFeedback = () => {
+        return good + neutral + bad;
+    };
+
+    const countPositiveFeedbackPercentage = () => {
+        return Math.round(good / countTotalFeedback() * 100);
+    };
+    const onLeaveFeedback = options => {
+        switch (options) {
             case 'good':
                 setGood(good + 1);
                 break;
@@ -30,14 +37,6 @@ function App() {
             default:
                 break;
         }
-    };
-
-    const countTotalFeedback = () => {
-        return good + neutral + bad;
-    };
-
-    const countPositiveFeedbackPercentage = () => {
-        return Math.round((good / (good + neutral + bad)) * 100);
     };
 
     return <>
